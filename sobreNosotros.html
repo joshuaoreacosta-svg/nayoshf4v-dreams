@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+    <title>Sobre Nosotros - Nayoshf4v Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sobre-nosotros.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="img/Loguito.jpeg" alt="" class="img-logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="contactenos.html">Contactenos</a></li>
+            </ul>
+            <div class="search-icon" onclick="openSearch()">🔍</div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrito flotante -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">S/0.00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="hero-background-image">
+        <img src="img/header.jpg" alt="Fondo de amigurumis">
+    </div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+        <div class="hero-content">
+            <h1>Nuestra Historia</h1>
+            <p>Tejiendo sueños del corazon.</p>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section class="story-section">
+        <div class="story-container">
+            <div class="story-content">
+                <div class="story-text fade-in">
+                    <h2>El Comienzo de un Sueño</h2>
+                    <p>Todo comenzó en una pequeña habitación llena de hilos de colores y una pasión inmensa por el arte del crochet. Lo que inició como un pasatiempo personal se transformó en una misión: crear amigurumis únicos que transmitan amor, calidez y alegría a cada hogar.</p>
+                    <p>En Nayoshf4v Dreams , cada puntada cuenta una historia. Cada creación lleva consigo horas de dedicación, paciencia y un amor genuino por este arte ancestral que hemos modernizado con diseños contemporáneos y elegantes.</p>
+                </div>
+                <div class="story-image fade-in">
+                    <div class="image-placeholder"><img src="img/Imagen de WhatsApp 2024-04-07 a las 10.57.14_252ab1b0.jpg" alt="" class="img-nosotros"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mission-vision">
+        <div class="mv-container">
+            <div class="mv-card fade-in">
+                <div class="mv-icon">🎯</div>
+                <h3>Nuestra Misión</h3>
+                <p>Crear piezas artesanales únicas que transmitan emoción y generen conexiones especiales. Cada amigurumi es más que un producto, es un abrazo tejido, un recuerdo que perdura, una expresión de amor hecha a mano.</p>
+            </div>
+            <div class="mv-card fade-in">
+                <div class="mv-icon">✨</div>
+                <h3>Nuestra Visión</h3>
+                <p>Ser reconocidos como la marca líder en amigurumis de alta calidad, inspirando a nuevas generaciones a descubrir y amar el arte del crochet. Queremos que cada hogar tenga una pieza tejida con amor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="values-section">
+        <div class="values-container">
+            <h2 class="section-title fade-in">Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <div class="value-icon">💜</div>
+                    <h4>Pasión</h4>
+                    <p>Amamos lo que hacemos. Cada puntada refleja nuestra dedicación y entusiasmo por el arte del crochet.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">🌟</div>
+                    <h4>Calidad</h4>
+                    <p>Utilizamos solo materiales premium y técnicas perfeccionadas para garantizar productos excepcionales.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">🤝</div>
+                    <h4>Compromiso</h4>
+                    <p>Nos comprometemos con cada cliente, asegurando su satisfacción y superando sus expectativas.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">🎨</div>
+                    <h4>Creatividad</h4>
+                    <p>Innovamos constantemente, creando diseños únicos que destacan por su originalidad y belleza.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">🌱</div>
+                    <h4>Sostenibilidad</h4>
+                    <p>Priorizamos materiales ecológicos y prácticas sostenibles en todo nuestro proceso creativo.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">❤️</div>
+                    <h4>Amor</h4>
+                    <p>Cada creación está hecha con amor genuino, transmitiendo calidez en cada detalle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Creativo -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2 class="section-title fade-in">Nuestro Proceso Creativo</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Inspiración</h3>
+                        <p>Buscamos inspiración en la naturaleza, el arte y las emociones. Cada diseño nace de una idea que queremos materializar.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Diseño</h3>
+                        <p>Creamos patrones únicos y detallados, considerando cada elemento para lograr el equilibrio perfecto.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Selección de Materiales</h3>
+                        <p>Elegimos cuidadosamente hilos premium, colores armoniosos y rellenos de la más alta calidad.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Tejido Artesanal</h3>
+                        <p>Con paciencia y dedicación, tejemos cada pieza a mano, puntada por puntada, con amor.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-number">05</div>
+                    <div class="timeline-content">
+                        <h3>Detalles Finales</h3>
+                        <p>Añadimos bordados, accesorios y toques especiales que hacen única cada creación.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-number">06</div>
+                    <div class="timeline-content">
+                        <h3>Control de Calidad</h3>
+                        <p>Revisamos minuciosamente cada pieza para asegurar que cumpla con nuestros estándares de excelencia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="1">1</div>
+                <div class="stat-label">Amigurumis Creados</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="1">1</div>
+                <div class="stat-label">Clientes Felices</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="00">0</div>
+                <div class="stat-label">Alumnos Graduados</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="1">1</div>
+                <div class="stat-label">Años de Experiencia</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="team-section">
+        <div class="team-container">
+            <h2 class="section-title fade-in">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-card fade-in">
+                    <div class="team-image">👩‍🎨</div>
+                    <h3>Nayeli Caballero</h3>
+                    <p class="team-role">Fundadora & Diseñadora Principal</p>
+                    <p class="team-bio">Apasionada del crochet, transformó su amor por el tejido en un negocio.</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-image">🧑‍🎨</div>
+                    <h3>Joshua Acosta</h3>
+                    <p class="team-role">Fundador & Encargado en Ventas</p>
+                    <p class="team-bio">Experto en captar la atencion del cliente a traves de los diseños en pagina web , aporta precisión para cada creación.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="section-title fade-in">Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Compré el unicornio para mi hija y quedó encantada. La calidad es excepcional y se nota el amor con el que está hecho. ¡Volveré a comprar!"</p>
+                    <p class="testimonial-author">- Laura Méndez</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Tomé el curso de principiantes y ahora puedo crear mis propios amigurumis. Las clases son muy didácticas y el ambiente es increíble."</p>
+                    <p class="testimonial-author">- Roberto Sánchez</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Pedí un amigurumi personalizado y superó todas mis expectativas. Es una verdadera obra de arte. Totalmente recomendado."</p>
+                    <p class="testimonial-author">- Patricia Vega</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2>¿Listo para Tener tu Propio Amigurumi?</h2>
+            <p>Explora nuestra colección o aprende a crear el tuyo en nuestras clases</p>
+            <div class="cta-buttons">
+                <a href="productos.html" class="cta-button primary">Ver Productos</a>
+                <a href="clases.html" class="cta-button secondary">Inscribirme a Clases</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nayoshf4v Dreams</h3>
+                <p>Creando arte tejido con dedicación y amor desde 2025. Cada pieza es única y especial.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/nayoshf4v.dreams?igsh=dzI5ZjVhM3UzanRx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://youtube.com/@nayoshf4v.dreams?si=T3sb-5j0980cIFgG"><img src="img/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@nayoshf4v.dreams" target="_blank"><img src="img/tik-tok.png" alt="Tiktok"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="clases.html">Clases</a>
+                <a href="contactenos.html">Contactenos</a>
+            </div>
+
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nayoshf4v Dreams. Todos los derechos reservados. Hecho con 💜 y crochet.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51941320575?text=Hola!%20Me%20gustaría%20consultar%20sobre%20sus%20productos" 
+    class="whatsapp-float" 
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor" d="M16 0C7.164 0 0 7.164 0 16c0 2.832.74 5.49 2.037 7.797L0 32l8.358-2.19A15.937 15.937 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.95-.714-6.993-1.953l-.502-.293-5.203 1.365 1.39-5.073-.32-.52A13.267 13.267 0 0 1 2.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
+            <path fill="currentColor" d="M23.334 19.166c-.333-.167-1.97-.97-2.275-1.08-.305-.11-.527-.167-.75.166-.222.333-.86 1.08-1.054 1.303-.194.222-.388.25-.721.083-1.917-.958-3.176-1.708-4.438-3.875-.333-.571.333-.53 1-1.763.111-.222.056-.416-.028-.583-.083-.167-.75-1.805-1.028-2.472-.27-.648-.545-.56-.75-.571-.194-.01-.416-.01-.639-.01s-.583.083-.888.416c-.305.333-1.166 1.138-1.166 2.777s1.194 3.222 1.36 3.444c.167.222 2.347 3.583 5.687 5.027 2.11.916 2.938.972 3.993.82.639-.097 1.97-.805 2.248-1.583.277-.778.277-1.444.194-1.583-.083-.139-.305-.222-.639-.389z"/>
+        </svg>
+    </a>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="close-search" onclick="closeSearch()">×</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Buscar productos o clases..." id="searchInput" onkeyup="searchProducts()">
+            <div id="searchResults" style="margin-top: 20px; color: var(--text);"></div>
+        </div>
+    </div>
+    <script src="js/cursor.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/clases.js"></script>
+<script src="js/busqueda.js"></script>
+<script src="js/sobre-nosotros.js"></script>
+</body>
+</html>

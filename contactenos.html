@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+    <title>Contáctenos - Nayoshf4v Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contactenos.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="img/Loguito.jpeg" alt="" class="img-logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="contactenos.html">Contactenos</a></li>
+            </ul>
+            <div class="search-icon" onclick="openSearch()">🔍</div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrito flotante -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">S/0.00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="close-search" onclick="closeSearch()">×</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Buscar productos..." id="searchInput" onkeyup="searchProducts()">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+
+    <section class="hero">
+    <div class="hero-background-image">
+        <img src="img/header.jpg" alt="Fondo de amigurumis">
+    </div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+        <div class="hero-content">
+            <h1>Hablemos</h1>
+            <p>Estamos aquí para convertir tus ideas en realidad tejida</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="info-title">Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h3>Ubicación</h3>
+                        <p>Lima, Perú<br>Atendemos en todo el país</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-content">
+                        <h3>Teléfono</h3>
+                        <p><a href="https://wa.me/51941320575">+51 941 320 575</a><br>Lun - Sáb: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@nayoshf4vdreams.com">info@nayoshf4vdreams.com</a><br>Respuesta en 24 horas</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-content">
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes - Viernes: 9:00 AM - 6:00 PM<br>Sábados: 10:00 AM - 4:00 PM<br>Domingos: Cerrado</p>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h3>Síguenos en Redes</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nayoshf4v.dreams?igsh=dzI5ZjVhM3UzanRx" title="Instagram"><img src="img/instagram.png" alt="" class="icon-image"></a>
+                        <a href="https://youtube.com/@nayoshf4v.dreams?si=T3sb-5j0980cIFgG" title="youtube"><img src="img/youtube.png" alt="" class="icon-image"></a>
+                        <a href="https://wa.me/51941320575" title="WhatsApp"><img src="img/whatsapp.png" alt="" class="icon-image"></a>
+                        <a href="https://www.tiktok.com/@nayoshf4v.dreams" title="TikTok"><img src="img/tik-tok.png" alt="" class="icon-image"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2 class="form-title">Envíanos un Mensaje</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="producto">Consulta sobre Productos</option>
+                            <option value="clase">Información de Clases</option>
+                            <option value="pedido">Pedido Personalizado</option>
+                            <option value="mayorista">Venta al Por Mayor</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <span>Enviar Mensaje ✨</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-container">
+            <h2 class="map-title">Encuéntranos</h2>
+            <iframe class="map-frame"
+                src="https://www.google.com/maps/embed?pb=!4v1762880135797!6m8!1m7!1sz_GvkohFHKNtevNgdmYCOQ!2m2!1d-12.02420065744382!2d-77.0899573788964!3f90.54!4f-11.129999999999995!5f0.7820865974627469"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nayoshf4v Dreams</h3>
+                <p>Creando arte tejido con dedicación y amor desde 2025. Cada pieza es única y especial.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/nayoshf4v.dreams?igsh=dzI5ZjVhM3UzanRx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://youtube.com/@nayoshf4v.dreams?si=T3sb-5j0980cIFgG"><img src="img/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@nayoshf4v.dreams" target="_blank"><img src="img/tik-tok.png" alt="Tiktok"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="clases.html">Clases</a>
+                <a href="sobreNosotros.html">Sobre Nosotros</a>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nayoshf4v Dreams. Todos los derechos reservados. Hecho con 💜 y crochet.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51941320575?text=Hola!%20Me%20gustaría%20consultar%20sobre%20sus%20productos" 
+    class="whatsapp-float" 
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor" d="M16 0C7.164 0 0 7.164 0 16c0 2.832.74 5.49 2.037 7.797L0 32l8.358-2.19A15.937 15.937 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.95-.714-6.993-1.953l-.502-.293-5.203 1.365 1.39-5.073-.32-.52A13.267 13.267 0 0 1 2.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
+            <path fill="currentColor" d="M23.334 19.166c-.333-.167-1.97-.97-2.275-1.08-.305-.11-.527-.167-.75.166-.222.333-.86 1.08-1.054 1.303-.194.222-.388.25-.721.083-1.917-.958-3.176-1.708-4.438-3.875-.333-.571.333-.53 1-1.763.111-.222.056-.416-.028-.583-.083-.167-.75-1.805-1.028-2.472-.27-.648-.545-.56-.75-.571-.194-.01-.416-.01-.639-.01s-.583.083-.888.416c-.305.333-1.166 1.138-1.166 2.777s1.194 3.222 1.36 3.444c.167.222 2.347 3.583 5.687 5.027 2.11.916 2.938.972 3.993.82.639-.097 1.97-.805 2.248-1.583.277-.778.277-1.444.194-1.583-.083-.139-.305-.222-.639-.389z"/>
+        </svg>
+    </a>ç
+    <script src="js/cursor.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/clases.js"></script>
+<script src="js/busqueda.js"></script>
+<script src="js/contactenos.js"></script>
+</body>
+</html>

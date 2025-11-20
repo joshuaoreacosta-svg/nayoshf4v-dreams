@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Amigurumis, Crochet,amigurumis personalizados,aigurumis unicos,clases viruales personalizadas">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+    <title>Amigurumis personalizados - Nayoshf4v Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="img/Loguito.jpeg" alt="" class="img-logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="contactenos.html">Contactenos</a></li>
+            </ul>
+            <div class="search-icon" onclick="openSearch()">🔍</div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+    <div class="hero-background-image">
+        <img src="img/header.jpg" alt="Fondo de amigurumis">
+    </div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="hero-content">
+        <h1>Arte Tejido con Amor</h1>
+        <p>Amigurumis únicos hechos a mano y clases personalizadas</p>
+        <a href="#productos" class="cta-button"><span>Explorar Mini Colección</span></a>
+    </div>
+</section>
+
+    <!-- Carrito flotante -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">S/0.00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <section id="productos" class="products">
+        <h2 class="section-title fade-in">Mini Colección Amigurumis</h2>
+        <div class="product-grid">
+            <div class="product-card fade-in">
+                <div class="product-image"><img src="img/spiderman.jpeg" alt="" class="producto-img"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Spiderman Personalizado</h3>
+                    <p class="product-price">S/80.00</p>
+                    <p class="product-description">Adorable Spiderman tejido con hilos premium de algodón. Perfecto para regalar a tu persona favorita.</p>
+                    <a href="../productos.html" class="buy-button"><span>Explorar en Productos</span></a>
+                </div>
+                
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image"><img src="img/harry_potter.jpg" alt="" class="producto-img"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Harry Potter Personalizado</h3>
+                    <p class="product-price">S/85.00</p>
+                    <p class="product-description">La magia llega hasta el mundo del crochet.</p>
+                    <a href="productos.html" class="buy-button"><span>Explorar en Productos</span></a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image"><img src="img/futbol.jpg" alt="" class="producto-img"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Futbolista Personalizado</h3>
+                    <p class="product-price">S/85.00</p>
+                    <p class="product-description">Recrea tu persona favorita con su equipo deportivo favorito.</p>
+                    <a href="productos.html" class="buy-button"><span>Explorar en Productos</span></a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image"><img src="img/persona.jpeg" alt="" class="producto-img"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Personalizacion propia</h3>
+                    <p class="product-price">S/75.00</p>
+                    <p class="product-description">Adquiere un mini tu con un aspecto tierno creado a crochet.</p>
+                    <a href="productos.html" class="buy-button"><span>Explorar en Productos</span></a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image"><img src="img/mascota personalizada.jpg" alt="" class="producto-img"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Mascota Personalizado</h3>
+                    <p class="product-price">S/96.00</p>
+                    <p class="product-description">Obten un amigurumi super tierno de tu perrihij@.</p>
+                    <a href="productos.html" class="buy-button"><span>Explorar en Productos</span></a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image"><img src="img/Unicornio.jpg" alt="" class="producto-img"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Unicornio Magico</h3>
+                    <p class="product-price">S/52.00</p>
+                    <p class="product-description">Unicornio brillante con detalles precisos. Una obra de arte tejida.</p>
+                    <a href="productos.html" class="buy-button"><span>Explorar en Productos</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="galeria" class="gallery">
+        <h2 class="section-title fade-in">Galería de Aventuras</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">🌸</div>
+            <div class="gallery-item fade-in">🦋</div>
+            <div class="gallery-item fade-in">🌺</div>
+            <div class="gallery-item fade-in">🐱</div>
+            <div class="gallery-item fade-in">🌙</div>
+            <div class="gallery-item fade-in">⭐</div>
+            <div class="gallery-item fade-in">🎀</div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nayoshf4v Dreams</h3>
+                <p>Creando arte tejido con dedicación y amor desde 2025. Cada pieza es única y especial.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/nayoshf4v.dreams?igsh=dzI5ZjVhM3UzanRx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://youtube.com/@nayoshf4v.dreams?si=T3sb-5j0980cIFgG"><img src="img/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@nayoshf4v.dreams" target="_blank"><img src="img/tik-tok.png" alt="Tiktok"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="productos.html">Productos</a>
+                <a href="clases.html">Clases</a>
+                <a href="sobreNosotros.html">Sobre Nosotros</a>
+                <a href="contactenos.html">Contactenos</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nayoshf4v Dreams. Todos los derechos reservados. Hecho con 💜 y crochet.</p>
+        </div>
+    </footer>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51941320575?text=Hola!%20Me%20gustaría%20consultar%20sobre%20sus%20productos" 
+    class="whatsapp-float" 
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor" d="M16 0C7.164 0 0 7.164 0 16c0 2.832.74 5.49 2.037 7.797L0 32l8.358-2.19A15.937 15.937 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.95-.714-6.993-1.953l-.502-.293-5.203 1.365 1.39-5.073-.32-.52A13.267 13.267 0 0 1 2.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
+            <path fill="currentColor" d="M23.334 19.166c-.333-.167-1.97-.97-2.275-1.08-.305-.11-.527-.167-.75.166-.222.333-.86 1.08-1.054 1.303-.194.222-.388.25-.721.083-1.917-.958-3.176-1.708-4.438-3.875-.333-.571.333-.53 1-1.763.111-.222.056-.416-.028-.583-.083-.167-.75-1.805-1.028-2.472-.27-.648-.545-.56-.75-.571-.194-.01-.416-.01-.639-.01s-.583.083-.888.416c-.305.333-1.166 1.138-1.166 2.777s1.194 3.222 1.36 3.444c.167.222 2.347 3.583 5.687 5.027 2.11.916 2.938.972 3.993.82.639-.097 1.97-.805 2.248-1.583.277-.778.277-1.444.194-1.583-.083-.139-.305-.222-.639-.389z"/>
+        </svg>
+    </a>
+        <div class="search-modal" id="searchModal">
+        <div class="close-search" onclick="closeSearch()">×</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Buscar productos o clases..." id="searchInput" onkeyup="searchProducts()">
+            <div id="searchResults" style="margin-top: 20px; color: var(--text);"></div>
+        </div>
+    </div>
+        <script src="js/cursor.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/clases.js"></script>
+<script src="js/busqueda.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+    <title>Clases de Crochet - Nayoshf4v Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/clases.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="img/Loguito.jpeg" alt="" class="img-logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="contactenos.html">Contactenos</a></li>
+            </ul>
+            <div class="search-icon" onclick="openSearch()">🔍</div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrito flotante -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">S/.0.00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="close-search" onclick="closeSearch()">×</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Buscar productos..." id="searchInput" onkeyup="searchProducts()">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="hero-background-image">
+        <img src="img/header.jpg" alt="Fondo de amigurumis">
+    </div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+        <div class="hero-content">
+            <h1>Aprende el Arte del Crochet</h1>
+            <p>Clases virtuales personalizadas desde la comodidad de tu hogar</p>
+            <a href="#cursos" class="cta-button"><span>Explorar Cursos</span></a>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <h2 class="section-title fade-in">¿Por Qué Aprender con Nosotros?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">💻</div>
+                    <h3>100% Virtual</h3>
+                    <p>Aprende desde casa con clases en vivo por videollamada. Horarios flexibles que se adaptan a ti.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Grupos Reducidos</h3>
+                    <p>Máximo 6 personas por clase para atención personalizada y seguimiento individual.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Material Incluido</h3>
+                    <p>Kit de inicio completo enviado a tu domicilio con hilos, agujas y patrones digitales.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Certificado</h3>
+                    <p>Certificado digital al finalizar el curso que avala tus nuevas habilidades.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Clases Grabadas</h3>
+                    <p>Acceso a grabaciones de todas las sesiones para repasar cuando quieras.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Comunidad</h3>
+                    <p>Grupo privado de WhatsApp para compartir avances y resolver dudas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos Disponibles -->
+    <section id="cursos" class="courses-section">
+        <div class="courses-container">
+            <h2 class="section-title fade-in">Nuestros Cursos</h2>
+            
+            <!-- Filtros de nivel -->
+            <div class="level-filters fade-in">
+                <button class="level-btn active" data-level="todos">Todos los Niveles</button>
+                <button class="level-btn" data-level="principiante">Principiante</button>
+                <button class="level-btn" data-level="intermedio">Intermedio</button>
+                <button class="level-btn" data-level="avanzado">Avanzado</button>
+            </div>
+
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Los cursos se generarán con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Inscripción -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2 class="section-title fade-in">Proceso de Inscripción</h2>
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📋</div>
+                    <h3>Elige tu Curso</h3>
+                    <p>Selecciona el curso que mejor se adapte a tu nivel y objetivos de aprendizaje.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">✍️</div>
+                    <h3>Completa el Formulario</h3>
+                    <p>Llena el formulario de inscripción con tus datos y preferencias de horario.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">💳</div>
+                    <h3>Realiza el Pago</h3>
+                    <p>Elige tu método de pago preferido. Aceptamos transferencias y tarjetas.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">📦</div>
+                    <h3>Recibe tu Kit</h3>
+                    <p>Te enviamos tu kit de materiales 3-5 días antes del inicio del curso.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">🎉</div>
+                    <h3>¡Comienza a Aprender!</h3>
+                    <p>Recibe el link de tu primera clase y empieza tu viaje en el crochet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios de Estudiantes -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="section-title fade-in">Lo Que Dicen Nuestros Estudiantes</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <div class="student-image">👩</div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Nunca había tomado una aguja de crochet y ahora ya terminé mi primer amigurumi. Las clases son súper claras y la profesora es muy paciente. ¡100% recomendado!"</p>
+                        <p class="student-name">María González</p>
+                        <p class="student-course">Curso Principiantes</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <div class="student-image">🧑</div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Las clases virtuales son excelentes. Puedo ver las grabaciones cuando tengo dudas y el grupo de WhatsApp es muy activo. Aprendí técnicas que no encontraba en videos de YouTube."</p>
+                        <p class="student-name">Carlos Ramírez</p>
+                        <p class="student-course">Curso Intermedio</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <div class="student-image">👩‍🦰</div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"El masterclass de amigurumis cambió mi nivel completamente. Ahora vendo mis creaciones y todo gracias a las técnicas profesionales que aprendí aquí."</p>
+                        <p class="student-name">Andrea López</p>
+                        <p class="student-course">Masterclass Amigurumis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>¿Necesito experiencia previa?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, nuestro curso de principiantes está diseñado para personas sin ninguna experiencia. Te enseñamos desde cómo sostener la aguja hasta crear tu primer amigurumi completo.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>¿Qué plataforma usan para las clases?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Utilizamos Zoom para las clases en vivo. Es muy fácil de usar y te enviamos instrucciones detalladas antes de la primera sesión.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>¿Cuánto tiempo tengo acceso a las grabaciones?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tienes acceso ilimitado a todas las grabaciones del curso. Puedes repasarlas cuantas veces necesites, incluso después de finalizar el programa.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>¿Qué incluye el kit de materiales?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El kit incluye: agujas de crochet de diferentes medidas, hilos de algodón en varios colores, relleno, marcadores de puntos, aguja lanera, tijeras y todos los patrones del curso en formato digital.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>¿Puedo cambiar de horario si no puedo asistir?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos flexibilidad de horarios. Si no puedes asistir a una clase en vivo, puedes ver la grabación y también coordinar una sesión de consulta personalizada.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen reembolsos?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ofrecemos reembolso completo si cancelas hasta 7 días antes del inicio del curso. Después de iniciado el curso, no hay reembolsos pero puedes transferir tu cupo a otro estudiante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximos Inicios -->
+    <section class="schedule-section">
+        <div class="schedule-container">
+            <h2 class="section-title fade-in">Próximos Inicios</h2>
+            <div class="schedule-grid">
+                <div class="schedule-card fade-in">
+                    <div class="schedule-month">Enero 2025</div>
+                    <div class="schedule-details">
+                        <h3>Curso Principiantes</h3>
+                        <p>📅 Inicia: 15 de Enero</p>
+                        <p>⏰ Horario: Martes y Jueves 7:00 PM</p>
+                        <p>👥 Cupos: 3 disponibles</p>
+                    </div>
+                    <button class="schedule-btn" onclick="openEnrollModal('Principiantes - Enero')">Inscribirme</button>
+                </div>
+                <div class="schedule-card fade-in">
+                    <div class="schedule-month">Enero 2025</div>
+                    <div class="schedule-details">
+                        <h3>Curso Intermedio</h3>
+                        <p>📅 Inicia: 20 de Enero</p>
+                        <p>⏰ Horario: Lunes y Miércoles 6:00 PM</p>
+                        <p>👥 Cupos: 5 disponibles</p>
+                    </div>
+                    <button class="schedule-btn" onclick="openEnrollModal('Intermedio - Enero')">Inscribirme</button>
+                </div>
+                <div class="schedule-card fade-in">
+                    <div class="schedule-month">Febrero 2025</div>
+                    <div class="schedule-details">
+                        <h3>Masterclass Amigurumis</h3>
+                        <p>📅 Inicia: 1 de Febrero</p>
+                        <p>⏰ Horario: Sábados 10:00 AM</p>
+                        <p>👥 Cupos: 2 disponibles</p>
+                    </div>
+                    <button class="schedule-btn" onclick="openEnrollModal('Masterclass - Febrero')">Inscribirme</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Inscripción -->
+    <div class="enroll-modal" id="enrollModal">
+        <div class="modal-overlay" onclick="closeEnrollModal()"></div>
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeEnrollModal()">×</button>
+            <h2>Inscripción al Curso</h2>
+            <p class="modal-subtitle" id="modalCourseName"></p>
+            
+            <form class="enroll-form" id="enrollForm">
+                <div class="form-group">
+                    <label>Nombre Completo *</label>
+                    <input type="text" required placeholder="Ingresa tu nombre completo">
+                </div>
+                
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" required placeholder="tu@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>Teléfono/WhatsApp *</label>
+                    <input type="tel" required placeholder="+51 999 999 999">
+                </div>
+                
+                <div class="form-group">
+                    <label>País/Ciudad *</label>
+                    <input type="text" required placeholder="Lima, Perú">
+                </div>
+                
+                <div class="form-group">
+                    <label>¿Tienes experiencia en crochet? *</label>
+                    <select required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="ninguna">Ninguna experiencia</option>
+                        <option value="basica">Experiencia básica</option>
+                        <option value="intermedia">Experiencia intermedia</option>
+                        <option value="avanzada">Experiencia avanzada</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferencia de Horario</label>
+                    <select>
+                        <option value="">Selecciona tu preferencia</option>
+                        <option value="manana">Mañanas (9AM - 12PM)</option>
+                        <option value="tarde">Tardes (2PM - 6PM)</option>
+                        <option value="noche">Noches (7PM - 9PM)</option>
+                        <option value="findes">Fines de semana</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>¿Cómo nos conociste?</label>
+                    <select>
+                        <option value="">Selecciona una opción</option>
+                        <option value="redes">Redes sociales</option>
+                        <option value="recomendacion">Recomendación</option>
+                        <option value="busqueda">Búsqueda en Google</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Comentarios adicionales</label>
+                    <textarea rows="3" placeholder="Cuéntanos tus expectativas o dudas sobre el curso..."></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" required>
+                        <span>Acepto los términos y condiciones y la política de privacidad *</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar Inscripción</button>
+                <p class="form-note">* Campos obligatorios. Te contactaremos en 24-48 horas.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Detalles de Curso -->
+    <div class="course-modal" id="courseModal">
+        <div class="modal-overlay" onclick="closeCourseModal()"></div>
+        <div class="modal-content large">
+            <button class="close-modal" onclick="closeCourseModal()">×</button>
+            <div class="course-modal-grid">
+                <div class="course-modal-image" id="modalCourseImage"></div>
+                <div class="course-modal-info">
+                    <h2 id="modalCourseTitle"></h2>
+                    <p class="course-modal-level" id="modalCourseLevel"></p>
+                    <p class="course-modal-price" id="modalCoursePrice"></p>
+                    <p class="course-modal-description" id="modalCourseDescription"></p>
+                    
+                    <div class="course-modal-details">
+                        <h3>📋 Detalles del Curso</h3>
+                        <div id="modalCourseDetails"></div>
+                    </div>
+                    
+                    <div class="course-modal-curriculum">
+                        <h3>📚 Contenido del Curso</h3>
+                        <div id="modalCourseCurriculum"></div>
+                    </div>
+                    
+                    <button class="enroll-course-btn" onclick="enrollFromModal()">Inscribirme Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nayoshf4v Dreams</h3>
+                <p>Creando arte tejido con dedicación y amor desde 2025. Cada pieza es única y especial.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/nayoshf4v.dreams?igsh=dzI5ZjVhM3UzanRx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://youtube.com/@nayoshf4v.dreams?si=T3sb-5j0980cIFgG"><img src="img/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@nayoshf4v.dreams" target="_blank"><img src="img/tik-tok.png" alt="Tiktok"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="sobreNosotros.html">Sobre Nosotros</a>
+                <a href="contactenos.html">Contactenos</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nayoshf4v Dreams. Todos los derechos reservados. Hecho con 💜 y crochet.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51941320575?text=Hola!%20Me%20gustaría%20consultar%20sobre%20sus%20productos" 
+    class="whatsapp-float" 
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor" d="M16 0C7.164 0 0 7.164 0 16c0 2.832.74 5.49 2.037 7.797L0 32l8.358-2.19A15.937 15.937 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.95-.714-6.993-1.953l-.502-.293-5.203 1.365 1.39-5.073-.32-.52A13.267 13.267 0 0 1 2.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
+            <path fill="currentColor" d="M23.334 19.166c-.333-.167-1.97-.97-2.275-1.08-.305-.11-.527-.167-.75.166-.222.333-.86 1.08-1.054 1.303-.194.222-.388.25-.721.083-1.917-.958-3.176-1.708-4.438-3.875-.333-.571.333-.53 1-1.763.111-.222.056-.416-.028-.583-.083-.167-.75-1.805-1.028-2.472-.27-.648-.545-.56-.75-.571-.194-.01-.416-.01-.639-.01s-.583.083-.888.416c-.305.333-1.166 1.138-1.166 2.777s1.194 3.222 1.36 3.444c.167.222 2.347 3.583 5.687 5.027 2.11.916 2.938.972 3.993.82.639-.097 1.97-.805 2.248-1.583.277-.778.277-1.444.194-1.583-.083-.139-.305-.222-.639-.389z"/>
+        </svg>
+    </a>
+    <script src="js/cursor.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/busqueda.js"></script>
+</body>
+</html>
