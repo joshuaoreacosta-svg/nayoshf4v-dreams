@@ -71,7 +71,7 @@ body {
         #cursor {
             width: 25px;
             height: 25px;
-            border: 2px solid var(--accent);
+            border: 2px solid #000000;
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -83,7 +83,7 @@ body {
         #cursor-follower {
             width: 13px;
             height: 13px;
-            background: var(--accent);
+            background: #000000;
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -832,11 +832,13 @@ nav {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 
 .cta-button.primary {
     background: var(--white);
     color: var(--dark);
+    border: 2px solid var(--white);
 }
 
 .cta-button.secondary {
@@ -845,6 +847,7 @@ nav {
     border: 2px solid var(--white);
 }
 
+/* Efecto de pintado circular DETRÁS del texto */
 .cta-button::before {
     content: '';
     position: absolute;
@@ -853,17 +856,17 @@ nav {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: var(--primary);
     transition: all 0.6s ease;
     transform: translate(-50%, -50%);
+    z-index: 0; /* DETRÁS del texto */
 }
 
 .cta-button.primary::before {
-    background: var(--accent);
+    background: rgba(0, 0, 0, 0.1); /* Oscurecer sutilmente el blanco */
 }
 
 .cta-button.secondary::before {
-    background: var(--white);
+    background: rgba(139, 123, 168, 0.4); /* Morado semi-transparente */
 }
 
 .cta-button:hover::before {
@@ -876,13 +879,9 @@ nav {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-.cta-button.secondary:hover {
-    color: var(--dark);
-}
-
 .cta-button span {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* ADELANTE del efecto */
 }
 
 /* Footer */

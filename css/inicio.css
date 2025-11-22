@@ -71,7 +71,7 @@
         #cursor {
             width: 25px;
             height: 25px;
-            border: 2px solid var(--accent);
+            border: 2px solid #000000;
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -83,7 +83,7 @@
         #cursor-follower {
             width: 13px;
             height: 13px;
-            background: var(--accent);
+            background: #000000;
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -431,7 +431,7 @@ nav {
         }
 
         .product-card:hover::before {
-            opacity: 0.9;
+            opacity: 0.1;
         }
 
         .product-card:hover {
@@ -473,21 +473,7 @@ nav {
             transition: color 0.3s ease;
         }
 
-        .product-card:hover .product-name {
-            color: var(--white);
-        }
-
-        .product-price {
-            font-size: 1.5rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 15px;
-            transition: color 0.3s ease;
-        }
-
-        .product-card:hover .product-price {
-            color: var(--white);
-        }
+        
 
         .product-description {
             color: var(--text);
@@ -496,9 +482,7 @@ nav {
             transition: color 0.3s ease;
         }
 
-        .product-card:hover .product-description {
-            color: rgba(255, 255, 255, 0.9);
-        }
+        
 
         .buy-button {
             width: 100%;

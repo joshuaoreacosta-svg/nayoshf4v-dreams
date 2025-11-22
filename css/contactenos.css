@@ -45,7 +45,7 @@ input:focus, textarea:focus, select:focus,
 #cursor {
     width: 25px;
     height: 25px;
-    border: 2px solid var(--accent);
+    border: 2px solid #000000;
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -57,7 +57,7 @@ input:focus, textarea:focus, select:focus,
 #cursor-follower {
     width: 13px;
     height: 13px;
-    background: var(--accent);
+    background: #000000;
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -1455,6 +1455,7 @@ nav {
         padding: 20px;
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
     
     .info-icon {
