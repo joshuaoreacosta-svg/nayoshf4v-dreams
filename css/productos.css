@@ -196,6 +196,42 @@ nav {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* 🌙 BOTÓN TOGGLE MODO OSCURO */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+.theme-toggle::before {
+    content: '☀️';
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle::before {
+    content: '🌙';
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
 .search-icon, .cart-icon {
     width: 40px;
     height: 40px;
@@ -208,6 +244,7 @@ nav {
     transition: all 0.3s ease;
     font-size: 1.2rem;
     position: relative;
+    color: var(--text-primary);
 }
 
 .search-icon:hover, .cart-icon:hover {

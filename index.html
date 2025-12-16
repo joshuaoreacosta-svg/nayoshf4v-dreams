@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +45,8 @@
                 <li><a href="clases.html">Clases</a></li>
                 <li><a href="contactenos.html">Contactenos</a></li>
             </ul>
+            <button class="theme-toggle" aria-label="Cambiar tema" onclick="toggleTheme()"></button>
+
             <div class="search-icon" onclick="openSearch()">🔍</div>
             <div class="cart-icon" onclick="toggleCart()">
                 🛒
@@ -202,6 +205,7 @@
             <div id="searchResults" style="margin-top: 20px; color: var(--text);"></div>
         </div>
     </div>
+    <script src="js/DARK-MODE.JS"></script>
         <script src="js/cursor.js"></script>
 <script src="js/carrito.js"></script>
 <script src="js/productos.js"></script>
@@ -242,6 +246,7 @@ if (menuToggle && navLinks) {
 </script>
 </body>
 
+</html>
 </html>
 
 
